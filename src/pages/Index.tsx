@@ -24,6 +24,20 @@ import {
   MapPinned
 } from "lucide-react";
 import heroImage from "@/assets/hero-architecture.jpg";
+import Header from "@/components/Header";
+import chukwuImg from "@/assets/team/chukwu-azubuike-ihunaya.webp";
+import elenaImg from "@/assets/team/elena-martinez.webp";
+import kaiImg from "@/assets/team/kai-patel.webp";
+import aishaImg from "@/assets/team/aisha-stevens.webp";
+import marcusImg from "@/assets/team/marcus-lee.webp";
+import zaraImg from "@/assets/team/zara-ahmed.webp";
+import jamesImg from "@/assets/team/james-rodriguez.webp";
+import amaraImg from "@/assets/team/amara-okafor.webp";
+import davidImg from "@/assets/team/david-chen.webp";
+import sarahImg from "@/assets/team/sarah-williams.webp";
+import michaelImg from "@/assets/team/michael-thompson.webp";
+import fatimaImg from "@/assets/team/fatima-al-rashid.webp";
+import oliverImg from "@/assets/team/oliver-kim.webp";
 
 const MarvelLanding = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,6 +67,7 @@ const MarvelLanding = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Header />
       
       {/* SLIDE 1: EXPLOSIVE HERO ENTRANCE */}
       <section 
@@ -432,27 +447,36 @@ const MarvelLanding = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/20 shadow-architectural text-center slide-in-up">
-              <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Users className="w-12 h-12 text-primary-foreground" />
-              </div>
+              <img
+                src={chukwuImg}
+                alt="Chukwu Azubuike Ihunaya — Chief Design Officer & Founder, headshot in black suit — Marvel Architecture"
+                className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border border-border shadow-depth"
+                loading="lazy"
+              />
               <h3 className="text-2xl font-bold mb-2 text-foreground">Chukwu Azubuike Ihunaya</h3>
               <p className="text-primary mb-4 font-semibold">Chief Design Officer & Founder</p>
               <p className="text-muted-foreground">Visionary architect with 15+ years revolutionizing spatial design. Pioneer in biophilic architecture and smart building integration.</p>
             </Card>
 
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-accent/20 shadow-architectural text-center slide-in-up" style={{animationDelay: '0.1s'}}>
-              <div className="w-24 h-24 bg-gradient-to-br from-accent to-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Leaf className="w-12 h-12 text-accent-foreground" />
-              </div>
+              <img
+                src={elenaImg}
+                alt="Elena Martinez — Sustainable Design Director, headshot in black suit — Marvel Architecture"
+                className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border border-border shadow-depth"
+                loading="lazy"
+              />
               <h3 className="text-2xl font-bold mb-2 text-foreground">Elena Martinez</h3>
               <p className="text-accent mb-4 font-semibold">Sustainable Design Director</p>
               <p className="text-muted-foreground">Global leader in eco-architecture, transforming the industry with net-positive energy buildings and regenerative design principles.</p>
             </Card>
 
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/20 shadow-architectural text-center slide-in-up" style={{animationDelay: '0.2s'}}>
-              <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Atom className="w-12 h-12 text-primary-foreground" />
-              </div>
+              <img
+                src={kaiImg}
+                alt="Kai Patel — Parametric Design Specialist, headshot in black suit — Marvel Architecture"
+                className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border border-border shadow-depth"
+                loading="lazy"
+              />
               <h3 className="text-2xl font-bold mb-2 text-foreground">Kai Patel</h3>
               <p className="text-primary mb-4 font-semibold">Parametric Design Specialist</p>
               <p className="text-muted-foreground">Mathematical genius creating impossible geometries. Leading expert in computational design and AI-assisted architectural generation.</p>
@@ -491,36 +515,48 @@ const MarvelLanding = () => {
             <h3 className="text-3xl font-bold text-center mb-8 text-primary slide-in-up">Senior Design Team</h3>
             <div className="grid md:grid-cols-4 gap-6">
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20 text-center slide-in-left">
-                <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="w-8 h-8 text-primary" />
-                </div>
+                <img
+                  src={aishaImg}
+                  alt="Aisha Stevens — Urban Planning Strategist, headshot in black suit — Marvel Architecture"
+                  className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border border-border shadow-depth"
+                  loading="lazy"
+                />
                 <h4 className="font-bold mb-2">Aisha Stevens</h4>
                 <p className="text-sm text-accent mb-2">Urban Planning Strategist</p>
                 <p className="text-xs text-muted-foreground">Smart city pioneer</p>
               </Card>
 
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-accent/20 text-center slide-in-left" style={{animationDelay: '0.1s'}}>
-                <div className="w-16 h-16 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-accent" />
-                </div>
+                <img
+                  src={marcusImg}
+                  alt="Marcus Lee — Adaptive Architecture Specialist, headshot in black suit — Marvel Architecture"
+                  className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border border-border shadow-depth"
+                  loading="lazy"
+                />
                 <h4 className="font-bold mb-2">Marcus Lee</h4>
                 <p className="text-sm text-primary mb-2">Adaptive Architecture Specialist</p>
                 <p className="text-xs text-muted-foreground">Responsive building expert</p>
               </Card>
 
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20 text-center slide-in-right" style={{animationDelay: '0.1s'}}>
-                <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Palette className="w-8 h-8 text-primary" />
-                </div>
+                <img
+                  src={zaraImg}
+                  alt="Zara Ahmed — Interior Experience Director, headshot in black suit — Marvel Architecture"
+                  className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border border-border shadow-depth"
+                  loading="lazy"
+                />
                 <h4 className="font-bold mb-2">Zara Ahmed</h4>
                 <p className="text-sm text-accent mb-2">Interior Experience Director</p>
                 <p className="text-xs text-muted-foreground">Sensory design master</p>
               </Card>
 
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-accent/20 text-center slide-in-right" style={{animationDelay: '0.2s'}}>
-                <div className="w-16 h-16 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Building2 className="w-8 h-8 text-accent" />
-                </div>
+                <img
+                  src={jamesImg}
+                  alt="James Rodriguez — Structural Innovation Chief, headshot in black suit — Marvel Architecture"
+                  className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border border-border shadow-depth"
+                  loading="lazy"
+                />
                 <h4 className="font-bold mb-2">James Rodriguez</h4>
                 <p className="text-sm text-primary mb-2">Structural Innovation Chief</p>
                 <p className="text-xs text-muted-foreground">Engineering excellence</p>
@@ -533,17 +569,20 @@ const MarvelLanding = () => {
             <h3 className="text-3xl font-bold text-center mb-8 text-accent slide-in-up">Extended Creative Team</h3>
             <div className="grid md:grid-cols-6 gap-4">
               {[
-                { name: "Amara Okafor", role: "Smart Building Technology Lead", icon: Blocks },
-                { name: "David Chen", role: "Lighting Design Virtuoso", icon: Zap },
-                { name: "Sarah Williams", role: "Landscape Architecture Director", icon: Leaf },
-                { name: "Michael Thompson", role: "Project Management Director", icon: Users },
-                { name: "Fatima Al-Rashid", role: "Design Research Analyst", icon: Atom },
-                { name: "Oliver Kim", role: "Digital Design Coordinator", icon: Glasses }
+                { name: "Amara Okafor", role: "Smart Building Technology Lead", img: amaraImg },
+                { name: "David Chen", role: "Lighting Design Virtuoso", img: davidImg },
+                { name: "Sarah Williams", role: "Landscape Architecture Director", img: sarahImg },
+                { name: "Michael Thompson", role: "Project Management Director", img: michaelImg },
+                { name: "Fatima Al-Rashid", role: "Design Research Analyst", img: fatimaImg },
+                { name: "Oliver Kim", role: "Digital Design Coordinator", img: oliverImg }
               ].map((member, index) => (
                 <Card key={index} className="p-4 bg-card/30 backdrop-blur-sm border-primary/10 text-center slide-in-up" style={{animationDelay: `${index * 0.1}s`}}>
-                  <div className="w-12 h-12 bg-primary/10 rounded-full mx-auto mb-3 flex items-center justify-center">
-                    <member.icon className="w-6 h-6 text-primary" />
-                  </div>
+                  <img
+                    src={member.img}
+                    alt={`${member.name} — ${member.role}, headshot in black suit — Marvel Architecture`}
+                    className="w-12 h-12 rounded-full object-cover mx-auto mb-3 border border-border"
+                    loading="lazy"
+                  />
                   <h5 className="font-semibold text-sm mb-1">{member.name}</h5>
                   <p className="text-xs text-muted-foreground">{member.role}</p>
                 </Card>
