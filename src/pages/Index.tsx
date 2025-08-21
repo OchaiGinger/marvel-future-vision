@@ -533,7 +533,7 @@ const MarvelLanding = () => {
                   className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border border-border shadow-depth"
                   loading="lazy"
                 />
-                <h4 className="font-bold mb-2">Marcus Lee</h4>
+                <h4 className="font-bold mb-2">Marcus Taiwo</h4>
                 <p className="text-sm text-primary mb-2">Adaptive Architecture Specialist</p>
                 <p className="text-xs text-muted-foreground">Responsive building expert</p>
               </Card>
@@ -557,7 +557,7 @@ const MarvelLanding = () => {
                   className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border border-border shadow-depth"
                   loading="lazy"
                 />
-                <h4 className="font-bold mb-2">James Rodriguez</h4>
+                <h4 className="font-bold mb-2">James Benjamin</h4>
                 <p className="text-sm text-primary mb-2">Structural Innovation Chief</p>
                 <p className="text-xs text-muted-foreground">Engineering excellence</p>
               </Card>
@@ -570,11 +570,11 @@ const MarvelLanding = () => {
             <div className="grid md:grid-cols-6 gap-4">
               {[
                 { name: "Amara Okafor", role: "Smart Building Technology Lead", img: amaraImg },
-                { name: "David Chen", role: "Lighting Design Virtuoso", img: davidImg },
+                { name: "David Noah", role: "Lighting Design Virtuoso", img: davidImg },
                 { name: "Sarah Williams", role: "Landscape Architecture Director", img: sarahImg },
-                { name: "Michael Thompson", role: "Project Management Director", img: michaelImg },
+                { name: "Michael Samuel", role: "Project Management Director", img: michaelImg },
                 { name: "Fatima Al-Rashid", role: "Design Research Analyst", img: fatimaImg },
-                { name: "Oliver Kim", role: "Digital Design Coordinator", img: oliverImg }
+                { name: "Oliver Peter", role: "Digital Design Coordinator", img: oliverImg }
               ].map((member, index) => (
                 <Card key={index} className="p-4 bg-card/30 backdrop-blur-sm border-primary/10 text-center slide-in-up" style={{animationDelay: `${index * 0.1}s`}}>
                   <img
