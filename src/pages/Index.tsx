@@ -291,61 +291,7 @@ const MarvelLanding = () => {
         </div>
       </section>
 
-      {/* SLIDE 5: INNOVATION DESIGN LABORATORY */}
-      <section id="slide-4" data-slide="4" className="min-h-screen flex items-center justify-center py-20 gradient-hero">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 slide-in-up">
-              <span className="text-foreground">WHERE</span>
-              <br />
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                IMPOSSIBLE SPACES
-              </span>
-              <br />
-              <span className="text-foreground">BECOME POSSIBLE</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 bg-card/30 backdrop-blur-sm border-primary/30 shadow-glow slide-in-up">
-              <Dna className="w-12 h-12 text-primary mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Biophilic Integration</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Living architecture that purifies air, regulates temperature, and creates symbiotic relationships between built and natural environments.
-              </p>
-            </Card>
-
-            <Card className="p-8 bg-card/30 backdrop-blur-sm border-accent/30 shadow-glow slide-in-up" style={{animationDelay: '0.1s'}}>
-              <Zap className="w-12 h-12 text-accent mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Adaptive Structures</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Weather-aware, responsive buildings that transform their configuration based on environmental conditions and usage patterns.
-              </p>
-            </Card>
-
-            <Card className="p-8 bg-card/30 backdrop-blur-sm border-primary/30 shadow-glow slide-in-up" style={{animationDelay: '0.2s'}}>
-              <Landmark className="w-12 h-12 text-primary mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Cultural Heritage Fusion</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Designs that seamlessly blend traditional cultural elements with cutting-edge functionality, honoring the past while embracing the future.
-              </p>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button 
-              variant="architectural" 
-              size="lg" 
-              onClick={() => scrollToSlide(5)}
-              className="slide-in-up"
-            >
-              View Success Stories
-              <ArrowRight className="ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
+     
       {/* SLIDE 6: SUCCESS STORIES & PORTFOLIO HIGHLIGHTS */}
       <section id="slide-5" data-slide="5" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
         <div className="max-w-7xl mx-auto px-6">
