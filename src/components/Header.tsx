@@ -11,17 +11,11 @@ import { Menu, X } from "lucide-react";
 import marvelLogo from "@/assets/marvel-logo.png";
 
 const links = [
-  { label: "Vision", href: "#slide-1" },
-  { label: "Services", href: "#slide-2" },
-  { label: "Innovation", href: "#slide-3" },
-  { label: "Lab", href: "#slide-4" },
-  { label: "Portfolio", href: "#slide-5" },
-  { label: "Leadership", href: "#slide-6" },
-  { label: "Team", href: "#slide-7" },
-  { label: "Global", href: "#slide-8" },
-  { label: "Roadmap", href: "#slide-9" },
-  { label: "Partners", href: "#slide-10" },
-  { label: "Contact", href: "#slide-11" },
+  { label: "Home", href: "/" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Lab & Innovation", href: "/lab-innovation" },
+  { label: "Leadership & Team", href: "/leadership" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -74,7 +68,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="#slide-11" aria-label="Start your transformation">
+          <a href="/contact" aria-label="Start your transformation">
             <Button variant="premium" size="sm">Start Project</Button>
           </a>
         </div>
@@ -117,7 +111,7 @@ export default function Header() {
                 </nav>
 
                 <div className="mt-4">
-                  <a href="#slide-11" onClick={() => setIsOpen(false)}>
+                  <a href="/contact" onClick={() => setIsOpen(false)}>
                     <Button variant="premium" className="w-full">
                       Start Your Project
                     </Button>
