@@ -7,8 +7,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import marvelLogo from "@/assets/marvel-logo.png";
+import { Link } from "react-router-dom";
 
 const links = [
   { label: "Home", href: "/" },
@@ -25,11 +26,14 @@ export default function Header() {
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo Section */}
-        <a href="#slide-0" className="flex items-center gap-2 font-extrabold tracking-tight text-lg md:text-xl group">
+        <Link
+          to="/"
+          className="flex items-center gap-2 font-extrabold tracking-tight text-lg md:text-xl group"
+        >
           <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
-            <img 
-              src={marvelLogo} 
-              alt="Marvel Architecture Logo" 
+            <img
+              src={marvelLogo}
+              alt="Marvel Architecture Logo"
               className="w-full h-full object-contain filter invert brightness-0 group-hover:brightness-100 group-hover:filter-none transition-all duration-300"
             />
           </div>
@@ -44,7 +48,7 @@ export default function Header() {
               MARVEL
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
@@ -53,12 +57,12 @@ export default function Header() {
               {links.map((link) => (
                 <NavigationMenuItem key={link.href}>
                   <NavigationMenuLink asChild>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-accent/10"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
@@ -68,9 +72,9 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="/contact" aria-label="Start your transformation">
+          <Link to="/contact" aria-label="Start your transformation">
             <Button variant="premium" size="sm">Start Project</Button>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu */}
@@ -86,9 +90,9 @@ export default function Header() {
               <div className="flex flex-col gap-6 mt-8">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <img 
-                      src={marvelLogo} 
-                      alt="Marvel Architecture" 
+                    <img
+                      src={marvelLogo}
+                      alt="Marvel Architecture"
                       className="w-8 h-8 filter invert brightness-0"
                     />
                     <span className="font-bold text-lg bg-gradient-to-r from-primary via-accent to-primary-glow bg-clip-text text-transparent">
@@ -96,26 +100,26 @@ export default function Header() {
                     </span>
                   </div>
                 </div>
-                
+
                 <nav className="flex flex-col gap-4">
                   {links.map((link) => (
-                    <a
+                    <Link
                       key={link.href}
-                      href={link.href}
+                      to={link.href}
                       onClick={() => setIsOpen(false)}
                       className="text-lg text-muted-foreground hover:text-foreground transition-smooth py-2 border-b border-border/50 hover:border-primary/30"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
 
                 <div className="mt-4">
-                  <a href="/contact" onClick={() => setIsOpen(false)}>
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>
                     <Button variant="premium" className="w-full">
                       Start Your Project
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </SheetContent>
