@@ -2,9 +2,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Award } from "lucide-react";
 import Header from "@/components/Header";
+import bernardImg from "@/assets/team/kai-patel.webp";
 import chukwuImg from "@/assets/team/chukwu-azubuike-ihunaya.webp";
 import elenaImg from "@/assets/team/elena-martinez.webp";
-import kaiImg from "@/assets/team/kai-patel.webp";
 import aishaImg from "@/assets/team/aisha-stevens.webp";
 import marcusImg from "@/assets/team/marcus-lee.webp";
 import zaraImg from "@/assets/team/zara-ahmed.webp";
@@ -32,7 +32,7 @@ const Leadership = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto slide-in-up">
-            Meet the extraordinary minds who transform architectural dreams into revolutionary realities.
+            Led by <span className="text-primary font-semibold">Bernard Ikebe</span>, our extraordinary team transforms architectural dreams into revolutionary realities.
           </p>
         </div>
       </section>
@@ -47,7 +47,22 @@ const Leadership = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Featured CEO */}
+          <div className="flex justify-center mb-8">
+            <Card className="p-10 bg-card/50 backdrop-blur-sm border-2 border-primary shadow-glow text-center slide-in-up w-full max-w-sm">
+              <img
+                src={bernardImg}
+                alt="Bernard Ikebe"
+                className="w-28 h-28 rounded-full object-cover mx-auto mb-6 border-2 border-primary shadow-elegant"
+                loading="lazy"
+              />
+              <h3 className="text-2xl font-bold mb-2 text-foreground">Bernard Ikebe</h3>
+              <p className="text-primary font-semibold mb-4">Chief Executive Officer</p>
+              <p className="text-muted-foreground">Visionary leader driving Marvel Future Vision's growth and strategic direction across global markets.</p>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/20 shadow-architectural text-center slide-in-up">
               <img
                 src={chukwuImg}
@@ -63,25 +78,13 @@ const Leadership = () => {
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-accent/20 shadow-architectural text-center slide-in-up">
               <img
                 src={elenaImg}
-                alt="Elena Martinez"
+                alt="Elena Adebayo"
                 className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border-2 border-accent shadow-elegant"
                 loading="lazy"
               />
               <h3 className="text-2xl font-bold mb-2 text-foreground">Elena Adebayo</h3>
               <p className="text-accent font-semibold mb-4">Lead Design Director</p>
               <p className="text-muted-foreground">Pioneering sustainable architecture with award-winning biophilic designs that harmonize nature and technology.</p>
-            </Card>
-
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/20 shadow-architectural text-center slide-in-up">
-              <img
-                src={kaiImg}
-                alt="Kai Patel"
-                className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border-2 border-primary shadow-elegant"
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Kai Olumide</h3>
-              <p className="text-primary font-semibold mb-4">Innovation Strategy Chief</p>
-              <p className="text-muted-foreground">Computational design expert pushing architectural boundaries through parametric innovation and smart building integration.</p>
             </Card>
           </div>
 

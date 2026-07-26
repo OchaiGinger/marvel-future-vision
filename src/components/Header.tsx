@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import marvelLogo from "@/assets/marvel-logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const links = [
   { label: "Home", href: "/" },
@@ -21,6 +21,7 @@ const links = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -59,7 +60,11 @@ export default function Header() {
                   <NavigationMenuLink asChild>
                     <Link
                       to={link.href}
-                      className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-accent/10"
+                      className={`px-3 py-2 text-sm transition-smooth rounded-md ${
+                        location.pathname === link.href
+                          ? 'text-primary font-semibold border-b-2 border-primary'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-accent/10'
+                      }`}
                     >
                       {link.label}
                     </Link>
@@ -107,7 +112,11 @@ export default function Header() {
                       key={link.href}
                       to={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-smooth py-2 border-b border-border/50 hover:border-primary/30"
+                      className={`text-lg transition-smooth py-2 border-b ${
+                      location.pathname === link.href
+                        ? 'text-foreground font-semibold border-primary/50'
+                        : 'text-muted-foreground hover:text-foreground border-border/50 hover:border-primary/30'
+                    }`}
                     >
                       {link.label}
                     </Link>

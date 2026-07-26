@@ -293,7 +293,7 @@ const MarvelLanding = () => {
 
      
       {/* SLIDE 6: SUCCESS STORIES & PORTFOLIO HIGHLIGHTS */}
-      <section id="slide-5" data-slide="5" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
+      <section id="slide-4" data-slide="4" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-8 slide-in-up">
@@ -368,7 +368,7 @@ const MarvelLanding = () => {
             <Button 
               variant="premium" 
               size="lg" 
-              onClick={() => scrollToSlide(6)}
+              onClick={() => scrollToSlide(5)}
               className="slide-in-up"
             >
               Meet Our Visionary Team
@@ -379,7 +379,7 @@ const MarvelLanding = () => {
       </section>
 
       {/* SLIDE 7: VISIONARY LEADERSHIP TEAM */}
-      <section id="slide-6" data-slide="6" className="min-h-screen flex items-center justify-center py-20 gradient-marble">
+      <section id="slide-5" data-slide="5" className="min-h-screen flex items-center justify-center py-20 gradient-marble">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-8 slide-in-up">
@@ -391,49 +391,52 @@ const MarvelLanding = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Featured CEO */}
+          <div className="flex justify-center mb-8">
+            <Card className="p-10 bg-card/50 backdrop-blur-sm border-2 border-primary shadow-glow text-center slide-in-up w-full max-w-sm">
+              <img
+                src={kaiImg}
+                alt="Bernard Ikebe — Chief Executive Officer — Marvel Architecture"
+                className="w-28 h-28 rounded-full object-cover mx-auto mb-6 border-2 border-primary shadow-elegant"
+                loading="lazy"
+              />
+              <h3 className="text-2xl font-bold mb-2 text-foreground">Bernard Ikebe</h3>
+              <p className="text-primary mb-4 font-semibold">Chief Executive Officer</p>
+              <p className="text-muted-foreground">Visionary leader driving Marvel Future Vision's growth and strategic direction across global markets.</p>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/20 shadow-architectural text-center slide-in-up">
               <img
                 src={chukwuImg}
-                alt="Chukwu Azubuike Ihunaya — Chief Design Officer & Founder, headshot in black suit — Marvel Architecture"
+                alt="Chukwu Azubuike Ihunaya — Founder & Chief Visionary — Marvel Architecture"
                 className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border border-border shadow-depth"
                 loading="lazy"
               />
               <h3 className="text-2xl font-bold mb-2 text-foreground">Chukwu Azubuike Ihunaya</h3>
-              <p className="text-primary mb-4 font-semibold">Chief Design Officer & Founder</p>
+              <p className="text-primary mb-4 font-semibold">Founder & Chief Visionary</p>
               <p className="text-muted-foreground">Visionary architect with 15+ years revolutionizing spatial design. Pioneer in biophilic architecture and smart building integration.</p>
             </Card>
 
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-accent/20 shadow-architectural text-center slide-in-up" style={{animationDelay: '0.1s'}}>
               <img
                 src={elenaImg}
-                alt="Elena Martinez — Sustainable Design Director, headshot in black suit — Marvel Architecture"
+                alt="Elena Adebayo — Lead Design Director — Marvel Architecture"
                 className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border border-border shadow-depth"
                 loading="lazy"
               />
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Elena Martinez</h3>
-              <p className="text-accent mb-4 font-semibold">Sustainable Design Director</p>
+              <h3 className="text-2xl font-bold mb-2 text-foreground">Elena Adebayo</h3>
+              <p className="text-accent mb-4 font-semibold">Lead Design Director</p>
               <p className="text-muted-foreground">Global leader in eco-architecture, transforming the industry with net-positive energy buildings and regenerative design principles.</p>
-            </Card>
-
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/20 shadow-architectural text-center slide-in-up" style={{animationDelay: '0.2s'}}>
-              <img
-                src={kaiImg}
-                alt="Kai Patel — Parametric Design Specialist, headshot in black suit — Marvel Architecture"
-                className="w-24 h-24 rounded-full object-cover mx-auto mb-6 border border-border shadow-depth"
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Kai Patel</h3>
-              <p className="text-primary mb-4 font-semibold">Parametric Design Specialist</p>
-              <p className="text-muted-foreground">Mathematical genius creating impossible geometries. Leading expert in computational design and AI-assisted architectural generation.</p>
             </Card>
           </div>
 
           <div className="text-center mt-12">
-            <Button 
-              variant="architectural" 
-              size="lg" 
-              onClick={() => scrollToSlide(7)}
+            <Button
+              variant="architectural"
+              size="lg"
+              onClick={() => scrollToSlide(6)}
               className="slide-in-up"
             >
               Meet Senior Design Team
@@ -444,7 +447,7 @@ const MarvelLanding = () => {
       </section>
 
       {/* SLIDE 8 & 9: SENIOR & EXTENDED DESIGN TEAMS - Combined for better UX */}
-      <section id="slide-7" data-slide="7" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
+      <section id="slide-6" data-slide="6" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-8 slide-in-up">
@@ -540,7 +543,7 @@ const MarvelLanding = () => {
             <Button 
               variant="premium" 
               size="lg" 
-              onClick={() => scrollToSlide(8)}
+              onClick={() => scrollToSlide(7)}
               className="slide-in-up"
             >
               See Global Influence
@@ -551,7 +554,7 @@ const MarvelLanding = () => {
       </section>
 
       {/* SLIDE 10: GLOBAL DESIGN INFLUENCE */}
-      <section id="slide-8" data-slide="8" className="min-h-screen flex items-center justify-center py-20 gradient-hero">
+      <section id="slide-7" data-slide="7" className="min-h-screen flex items-center justify-center py-20 gradient-hero">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 slide-in-up">
@@ -600,7 +603,7 @@ const MarvelLanding = () => {
             <Button 
               variant="hero" 
               size="lg" 
-              onClick={() => scrollToSlide(9)}
+              onClick={() => scrollToSlide(8)}
               className="slide-in-up"
             >
               See Future Roadmap
@@ -611,7 +614,7 @@ const MarvelLanding = () => {
       </section>
 
       {/* SLIDE 11: FUTURE DESIGN ROADMAP */}
-      <section id="slide-9" data-slide="9" className="min-h-screen flex items-center justify-center py-20 gradient-marble">
+      <section id="slide-8" data-slide="8" className="min-h-screen flex items-center justify-center py-20 gradient-marble">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-8 slide-in-up">
@@ -665,7 +668,7 @@ const MarvelLanding = () => {
             <Button 
               variant="architectural" 
               size="lg" 
-              onClick={() => scrollToSlide(10)}
+              onClick={() => scrollToSlide(9)}
               className="slide-in-up"
             >
               Join The Revolution
@@ -676,7 +679,7 @@ const MarvelLanding = () => {
       </section>
 
       {/* SLIDE 12: PARTNERSHIP INVITATION */}
-      <section id="slide-10" data-slide="10" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
+      <section id="slide-9" data-slide="9" className="min-h-screen flex items-center justify-center py-20 gradient-stone">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-5xl md:text-7xl font-bold mb-8 slide-in-up">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -716,7 +719,7 @@ const MarvelLanding = () => {
           <Button 
             variant="hero" 
             size="xl" 
-            onClick={() => scrollToSlide(11)}
+            onClick={() => scrollToSlide(10)}
             className="slide-in-up"
           >
             START YOUR TRANSFORMATION
@@ -726,7 +729,7 @@ const MarvelLanding = () => {
       </section>
 
       {/* SLIDE 13: URGENT CONTACT & CONVERSION */}
-      <section id="slide-11" data-slide="11" className="min-h-screen flex items-center justify-center py-20 gradient-hero">
+      <section id="slide-10" data-slide="10" className="min-h-screen flex items-center justify-center py-20 gradient-hero">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 slide-in-up">
@@ -835,7 +838,7 @@ const MarvelLanding = () => {
 
       {/* Floating Navigation Dots */}
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 space-y-2 z-50">
-        {Array.from({ length: 12 }, (_, i) => (
+        {Array.from({ length: 11 }, (_, i) => (
           <button
             key={i}
             onClick={() => scrollToSlide(i)}
